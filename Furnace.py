@@ -10,14 +10,14 @@ import Lights
 Lights.setup()
 
 print 'Starting'
-Movies.StartLoop('/home/pi/Assets/Furnace')
+#Movies.StartLoop('/home/pi/Assets/Furnace')
 
 while True:    # Runs until break is encountered. We want to set it to break on a particular ID.
     #Logging.HeartBeat()
     n = raw_input("Scanned ID: ")
     Lights.showColor("gold")
     if n == "STOP":
-        Movies.StopLoop()
+        #Movies.StopLoop()
         Lights.cleanup()
         print "Stopping."
         break  # stops the loop
@@ -28,7 +28,7 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         time.sleep(2)
         Lights.showColor("none")
         print "Playing."
-        Movies.PlayMovie()
+        #Movies.PlayMovie()
 
         #time.sleep(60)
 	Lights.showColor("gold")
