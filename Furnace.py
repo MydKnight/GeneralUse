@@ -24,13 +24,15 @@ while True:    # Runs until break is encountered. We want to set it to break on 
     else :
         # On Input, Disable Reader
         #os.system("/home/pi/NYE2015/Scripts/disableRFID.sh")
+        print "red"
         Lights.showColor("red")
         time.sleep(2)
+        print "none"
         Lights.showColor("none")
         print "Playing."
         #Movies.PlayMovie()
 
-        time.sleep(60)
+        time.sleep(5)
 	Lights.showColor("gold")
         # Reenable reader.
         #os.system("/home/pi/NYE2015/Scripts/enableRFID.sh")
