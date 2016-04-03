@@ -25,3 +25,4 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         time.sleep(18)
         # Reenable reader.
         os.system("/home/pi/NYE2015/Scripts/enableRFID.sh")
+        Movies.PlayLoop()
