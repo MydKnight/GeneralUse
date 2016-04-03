@@ -8,21 +8,21 @@ import time
 # This code runs the Furnace
 
 print 'Starting'
-#Movies.StartLoop('/home/pi/Assets/Furnace')
+Movies.StartLoop('/home/pi/Assets/Furnace')
 
 while True:    # Runs until break is encountered. We want to set it to break on a particular ID.
     #Logging.HeartBeat()
     n = raw_input("Scanned ID: ")
     if n == "STOP":
-        #Movies.StopLoop()
+        Movies.StopLoop()
         print "Stopping."
         break  # stops the loop
     else :
         # On Input, Disable Reader
         os.system("/home/pi/NYE2015/Scripts/disableRFID.sh")
         print "Playing."
-        #Movies.PlayMovie()
+        Movies.PlayMovie()
 
-        time.sleep(5)
+        time.sleep(18)
         # Reenable reader.
         os.system("/home/pi/NYE2015/Scripts/enableRFID.sh")
