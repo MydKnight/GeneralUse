@@ -30,7 +30,7 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         print "Playing."
         #Movies.PlayMovie()
 
-        #time.sleep(60)
+        time.sleep(60)
 	Lights.showColor("gold")
         # Reenable reader.
         #os.system("/home/pi/NYE2015/Scripts/enableRFID.sh")
