@@ -1,6 +1,6 @@
 __author__ = 'madsens'
-
-import Logging
+import sys
+sys.path.append("/home/pi/Python/PiClasses")
 import os
 import Movies
 import time
@@ -9,9 +9,8 @@ import Lights
 # This code runs the Furnace
 Lights.setup()
 
-Logging.PowerLog()
 print 'Starting'
-Movies.StartLoop('/home/pi/NYE2015/Assets/Furnace')
+Movies.StartLoop('/home/pi/Assets/Furnace')
 
 while True:    # Runs until break is encountered. We want to set it to break on a particular ID.
     #Logging.HeartBeat()
@@ -29,7 +28,6 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         time.sleep(2)
         Lights.showColor("none")
         print "Playing."
-        Logging.LogAccess(n)
         Movies.PlayMovie()
 
         time.sleep(60)
