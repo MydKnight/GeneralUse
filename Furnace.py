@@ -22,7 +22,6 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         os.system("/home/pi/NYE2015/Scripts/disableRFID.sh")
         print "Playing."
         Movies.PlayMovie()
-
         time.sleep(18)
         # Reenable reader.
         os.system("/home/pi/NYE2015/Scripts/enableRFID.sh")

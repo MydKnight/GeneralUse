@@ -15,6 +15,7 @@ def PlayMovie ():
                  socket.SOCK_DGRAM) # UDP
     sock.sendto(MESSAGE, (UDP_IP, UDP_PORT))
     os.system('stty sane')
+    print "done playing movie"
     return
 
 def StartLoop(LoopPath):
