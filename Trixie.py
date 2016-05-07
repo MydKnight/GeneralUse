@@ -6,6 +6,8 @@ import Logging
 import time
 import os
 
+time.sleep(15)
+
 dbConn = Logging.Logging()
 
 dbConn.logBoot()
