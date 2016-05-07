@@ -1,9 +1,14 @@
 __author__ = 'madsens'
 import sys
 sys.path.append("/home/pi/Python/PiClasses")
+import Logging
 import os
 import Movies
 import time
+
+dbConn = Logging.Logging()
+
+dbConn.logBoot()
 
 # This code runs the Furnace
 
@@ -18,6 +23,8 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         print "Stopping."
         break  # stops the loop
     else :
+        dbConn.logAccess(n)
+
         # On Input, Disable Reader
         os.system("/home/pi/Scripts/disableRFID.sh")
         print "Playing."
