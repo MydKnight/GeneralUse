@@ -19,10 +19,10 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         break  # stops the loop
     else :
         # On Input, Disable Reader
-        os.system("/home/pi/NYE2015/Scripts/disableRFID.sh")
+        os.system("/home/pi/Scripts/disableRFID.sh")
         print "Playing."
         Movies.PlayMovie()
         time.sleep(18)
         # Reenable reader.
-        os.system("/home/pi/NYE2015/Scripts/enableRFID.sh")
+        os.system("/home/pi/Scripts/enableRFID.sh")
         Movies.PlayLoop()

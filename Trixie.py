@@ -16,7 +16,7 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         break  # stops the loop
     else :
         #Disable RFID
-        os.system("/home/pi/Halloween2015/Scripts/disableRFID.sh")
+        os.system("/home/pi/Scripts/disableRFID.sh")
 
         #Trigger GPIO Pins. Trixie just uses pin 13
         Lights.on([13])
@@ -33,4 +33,4 @@ while True:    # Runs until break is encountered. We want to set it to break on 
         #Logging.LogAudioAccess(n, previousFile)
 
         #Reenable RFID
-        os.system("/home/pi/Halloween2015/Scripts/enableRFID.sh")
+        os.system("/home/pi/Scripts/enableRFID.sh")
