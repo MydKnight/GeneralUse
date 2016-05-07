@@ -6,6 +6,9 @@ import os
 import Movies
 import time
 
+#PI takes a while to get its IP so sleep for 30 seconds before program runs
+time.sleep(30)
+
 dbConn = Logging.Logging()
 
 dbConn.logBoot()
