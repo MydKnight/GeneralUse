@@ -1,8 +1,14 @@
 __author__ = 'madsens'
 import Lights
-#import Logging
+import sys
+sys.path.append("/home/pi/PiClasses")
+import Logging
 import time
 import os
+
+dbConn = Logging.Logging()
+
+dbConn.logBoot()
 
 lastScan = 0
 previousFile = ""
@@ -12,9 +18,11 @@ os.system("/home/pi/Halloween2015/Scripts/enableRFID.sh")
 while True:    # Runs until break is encountered. We want to set it to break on a particular ID.
     n = raw_input("Scanned ID: ")
     currentScan = time.time()
-    if n == "0001603911":
+    if n == "STOP":
         break  # stops the loop
     else :
+        dbConn.logAccess(n)
+
         #Disable RFID
         os.system("/home/pi/Scripts/disableRFID.sh")
 
